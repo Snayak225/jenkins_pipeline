@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SRE Program - Containers</title>
+    <link rel="stylesheet" href="./views/frontend.css">
+</head>
+<body id="document-main">
+    <div id="document-header">
+        <div id="document-header-title">Labs</div>
+        <div id="document-header-greeting">Lab Session on Containers and Orchestration</div>
+    </div>
+    <div id="document-content">
+        <div id="document-left">
+            <form id="collectname" action="/getage" method="post">
+                <label class="formtext" for="name">Tell us your name, and we will guess your age:</label>
+                <input class="formtext" id="username" type="text" name="name" placeholder="Enter your name" value=<%= name %>>
+                <input class="formbutton" id="response" type="submit" value="Submit">
+                <input class="formbutton" id="clear" type="reset" value="Reset">
+            </form>
+            <div id="collectname-response">
+                <div>Guessed age : <%= age %></div>
+                <div><%= message %></div>            
+            </div>
+        </div>
+        <div id="document-right">
+            <span class="config-info">
+                <label>Container Hostname :</label>
+                <label><%= host %></label>
+            </span>
+            <span class="config-info">
+                <label>Container Port :</label>
+                <label><%= port %></label>
+            </span>
+        </div>
+    </div>
+</body>
